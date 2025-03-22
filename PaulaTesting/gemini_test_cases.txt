@@ -1,0 +1,153 @@
+# Basic Test Cases
+
+## Feature: Product Browsing
+
+### Scenario: View product details
+Given User is on the homepage
+When User clicks on a product
+Then Product details page is displayed
+
+### Scenario: Search for a product
+Given User is on the homepage
+When User enters a product name in the search bar and clicks search
+Then Search results page displays relevant products
+
+
+## Feature: Add to Cart
+
+### Scenario: Add a single product to cart
+Given User is on a product details page
+When User clicks "Add to Cart" button
+Then Product is added to the shopping cart
+
+
+## Feature: View Cart
+
+### Scenario: View the shopping cart
+Given User has added products to the cart
+When User clicks on the cart icon
+Then Shopping cart page is displayed with the added products
+
+
+## Feature: Remove from Cart
+
+### Scenario: Remove a product from the cart
+Given User is on the shopping cart page
+When User clicks the "Remove" button next to a product
+Then Product is removed from the shopping cart
+
+
+## Feature: Checkout Process
+
+### Scenario: Proceed to checkout
+Given User has products in the cart
+When User clicks the "Checkout" button
+Then User is redirected to the checkout page
+
+
+## Feature: Login
+
+### Scenario: Successful user login
+Given User is on the login page
+When User enters valid credentials and clicks "Login"
+Then User is logged in and redirected to the homepage
+
+### Scenario: Invalid user login
+Given User is on the login page
+When User enters invalid credentials and clicks "Login"
+Then Error message is displayed
+
+
+## Feature: Registration
+
+### Scenario: Successful user registration
+Given User is on the registration page
+When User enters valid details and clicks "Register"
+Then User account is created and user is logged in
+
+
+## Feature: Homepage Navigation
+
+### Scenario: Navigate to a category page
+Given User is on the homepage
+When User clicks on a category link
+Then User is redirected to the selected category page
+
+
+# Intermediate Test Cases
+
+## Feature: Product Filtering
+
+### Scenario: Filter products by price range
+Given User is on a category page
+When User selects a price range filter
+Then Products within the selected price range are displayed
+
+
+## Feature: Product Sorting
+
+### Scenario: Sort products by price (low to high)
+Given User is on a category page
+When User selects "Price (Low to High)" from the sort dropdown
+Then Products are sorted by price in ascending order
+
+
+## Feature: Add Multiple Products to Cart
+
+### Scenario: Add multiple products to the cart from different product pages
+Given User browses several product pages
+When User adds products to the cart from each page
+Then All added products are present in the shopping cart
+
+
+## Feature: Update Cart Quantity
+
+### Scenario: Update the quantity of a product in the cart
+Given User has a product in the cart
+When User changes the quantity and clicks "Update"
+Then Cart is updated with the new quantity
+
+
+## Feature: Coupon Code
+
+### Scenario: Apply a valid coupon code at checkout
+Given User is on the checkout page
+When User enters a valid coupon code and clicks "Apply"
+Then Discount is applied to the order total
+
+### Scenario: Apply an invalid coupon code at checkout
+Given User is on the checkout page
+When User enters an invalid coupon code and clicks "Apply"
+Then Error message is displayed
+
+
+## Feature: Checkout Process with Multiple Items
+
+### Scenario: Complete checkout with multiple items in the cart
+Given User has multiple products in the cart
+When User proceeds through the checkout process, providing necessary information
+Then Order confirmation page is displayed with order details
+
+
+## Feature: Account Information Update
+
+### Scenario: Update user's profile information
+Given User is logged in and on the account settings page
+When User updates their profile information and saves changes
+Then Profile information is updated successfully
+
+
+## Feature: Password Reset
+
+### Scenario: Request a password reset
+Given User is on the login page
+When User clicks "Forgot Password" and enters their email address
+Then Password reset link is sent to the user's email
+
+
+## Feature: Product Reviews
+
+### Scenario: Submit a product review
+Given User is logged in and on a product details page
+When User writes a review and submits it
+Then Review is submitted and displayed on the product page (pending approval if applicable)

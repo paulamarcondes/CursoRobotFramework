@@ -1,0 +1,141 @@
+# Test Cases for E-commerce Store
+
+# Test Case 1: User Registration
+Feature: User Registration
+Scenario: Successful registration with valid credentials
+Given User is on the registration page
+When User enters valid email, password, and confirms password
+Then User is redirected to the login page with a success message
+
+# Test Case 2: Product Search
+Feature: Product Search
+Scenario: Searching for a product by name
+Given User is on the homepage
+When User enters a product name in the search bar and submits
+Then Search results page displays the product with the matching name
+
+# Test Case 3: Product Details
+Feature: Product Details
+Scenario: Viewing product details
+Given User is on the product search results page
+When User clicks on a product link
+Then Product details page displays the product's name, price, and description
+
+# Test Case 4: Shopping Cart
+Feature: Shopping Cart
+Scenario: Adding a product to the cart
+Given User is on the product details page
+When User clicks the "Add to Cart" button
+Then Product is added to the cart with the correct quantity and price
+
+# Test Case 5: Login
+Feature: Login
+Scenario: Successful login with valid credentials
+Given User is on the login page
+When User enters valid email and password
+Then User is redirected to the homepage with a welcome message
+
+# Test Case 6: Payment Gateway
+Feature: Payment Gateway
+Scenario: Successful payment with valid credit card details
+Given User is on the checkout page
+When User enters valid credit card details and submits
+Then Payment is processed successfully, and the order is confirmed
+
+# Test Case 7: Order History
+Feature: Order History
+Scenario: Viewing order history
+Given User is logged in and has placed an order
+When User navigates to the order history page
+Then Order history page displays the user's past orders with order numbers and dates
+
+# Test Case 8: Product Reviews
+Feature: Product Reviews
+Scenario: Adding a product review
+Given User is on the product details page
+When User enters a review and submits
+Then Review is added to the product page with the user's name and rating
+
+# Test Case 9: Coupon Codes
+Feature: Coupon Codes
+Scenario: Applying a valid coupon code
+Given User is on the checkout page
+When User enters a valid coupon code and applies
+Then Discount is applied to the order total
+
+# Test Case 10: Password Recovery
+Feature: Password Recovery
+Scenario: Recovering password with valid email
+Given User is on the login page
+When User enters a valid email and submits the password recovery request
+Then Password recovery email is sent to the user with a reset link
+
+# Test Case 11: Product Variations
+Feature: Product Variations
+Scenario: Selecting a product variation (e.g., size, color)
+Given User is on the product details page with variations
+When User selects a variation and adds to cart
+Then Correct variation is added to the cart with the correct price
+
+# Test Case 12: Shipping Options
+Feature: Shipping Options
+Scenario: Selecting a shipping option
+Given User is on the checkout page
+When User selects a shipping option and submits
+Then Shipping cost is updated, and the order is processed
+
+# Test Case 13: Tax Calculation
+Feature: Tax Calculation
+Scenario: Calculating tax based on location
+Given User is on the checkout page
+When User enters a location (e.g., state, country)
+Then Tax is calculated correctly, and the order total is updated
+
+# Test Case 14: Gift Wrapping
+Feature: Gift Wrapping
+Scenario: Adding gift wrapping to an order
+Given User is on the checkout page
+When User selects gift wrapping and submits
+Then Gift wrapping is added to the order with the correct cost
+
+# Test Case 15: Order Cancellation
+Feature: Order Cancellation
+Scenario: Canceling an order
+Given User is on the order history page
+When User cancels an order
+Then Order is canceled successfully, and the user receives a confirmation email
+
+# Test Case 16: Product Recommendations
+Feature: Product Recommendations
+Scenario: Viewing product recommendations
+Given User is on the product details page
+When User views product recommendations
+Then Recommended products are displayed with images and prices
+
+# Test Case 17: Social Media Sharing
+Feature: Social Media Sharing
+Scenario: Sharing a product on social media
+Given User is on the product details page
+When User shares a product on social media
+Then Product is shared successfully with a link and image
+
+# Test Case 18: Newsletter Subscription
+Feature: Newsletter Subscription
+Scenario: Subscribing to the newsletter
+Given User is on the homepage
+When User enters a valid email and submits the subscription request
+Then Newsletter subscription is confirmed, and the user receives a welcome email
+
+# Test Case 19: Account Management
+Feature: Account Management
+Scenario: Updating account information
+Given User is logged in and on the account page
+When User updates their email address and submits
+Then Account information is updated successfully, and the user receives a confirmation email
+
+# Test Case 20: Logout
+Feature: Logout
+Scenario: Successful logout
+Given User is logged in and on the homepage
+When User clicks the logout button
+Then User is redirected to the login page, and their session is terminated

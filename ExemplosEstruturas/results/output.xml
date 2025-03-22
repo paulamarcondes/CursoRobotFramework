@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-13T11:02:08.187574" rpa="false" schemaversion="5">
+<suite id="s1" name="UsandoBlocosIF" source="c:\CursoUdemy\RobotFramework\ExemplosEstruturas\UsandoBlocosIF.robot">
+<test id="s1-t1" name="01: Exemplo bloco IF" line="12">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.244828" elapsed="0.001243"/>
+</kw>
+<if>
+<branch type="IF" condition="${STATUS} &gt; 0">
+<kw name="Logar informações quando o status for maior que zero">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T11:02:08.248775" level="INFO">O STATUS [10] é maior que zero!</msg>
+<arg>O STATUS [${STATUS}] é maior que zero!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.248444" elapsed="0.012486"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>O STATUS [${STATUS}] é maior que zero!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.261381" elapsed="0.000443"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.247941" elapsed="0.014064"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T11:02:08.262760" level="INFO">Aqui executei um bloco de IF simples, pois a condição dada é VERDADEIRA!!!!</msg>
+<arg>message=Aqui executei um bloco de IF simples, pois a condição dada é VERDADEIRA!!!!</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.262399" elapsed="0.000729"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.247193" elapsed="0.016065"/>
+</branch>
+<status status="PASS" start="2025-02-13T11:02:08.247130" elapsed="0.016242"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.265668" elapsed="0.000464"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.243906" elapsed="0.023013"/>
+</test>
+<test id="s1-t2" name="02: Exemplo com dois blocos IF e ELSE" line="18">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.269805" elapsed="0.000458"/>
+</kw>
+<if>
+<branch type="IF" condition="${STATUS} &gt; 0">
+<kw name="Logar informações quando o status for maior que zero">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T11:02:08.271959" level="INFO">O STATUS [10] é maior que zero!</msg>
+<arg>O STATUS [${STATUS}] é maior que zero!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.271707" elapsed="0.000420"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>O STATUS [${STATUS}] é maior que zero!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.272300" elapsed="0.000447"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.271339" elapsed="0.001570"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T11:02:08.273324" level="INFO">Aqui executei um bloco de IF com ELSE e caiu no bloco que corresponde a condição VERDADEIRA!!!!</msg>
+<arg>message=Aqui executei um bloco de IF com ELSE e caiu no bloco que corresponde a condição VERDADEIRA!!!!</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.273069" elapsed="0.000640"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.270909" elapsed="0.002893"/>
+</branch>
+<branch type="ELSE">
+<kw name="Logar informações quando o status for menor ou igual que zero">
+<status status="NOT RUN" start="2025-02-13T11:02:08.274058" elapsed="0.000066"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>message=Aqui executei um bloco de IF com ELSE e caiu no bloco que corresponde a condição FALSA!!!!</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-13T11:02:08.274251" elapsed="0.000076"/>
+</kw>
+<status status="NOT RUN" start="2025-02-13T11:02:08.273877" elapsed="0.000508"/>
+</branch>
+<status status="PASS" start="2025-02-13T11:02:08.270861" elapsed="0.003579"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.275036" elapsed="0.001041"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.269040" elapsed="0.007443"/>
+</test>
+<test id="s1-t3" name="03: Exemplo blocos IF - ELSE IF" line="27">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.278368" elapsed="0.000828"/>
+</kw>
+<if>
+<branch type="IF" condition="${STATUS} &gt; 0">
+<kw name="Logar informações quando o status for maior que zero">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T11:02:08.286460" level="INFO">O STATUS [10] é maior que zero!</msg>
+<arg>O STATUS [${STATUS}] é maior que zero!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.286168" elapsed="0.000492"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>O STATUS [${STATUS}] é maior que zero!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.286857" elapsed="0.000613"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.285818" elapsed="0.001913"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T11:02:08.288064" level="INFO">Aqui executei um bloco de IFs aninhados e caiu no bloco que corresponde a condição VERDADEIRA do primeiro IF!!!!</msg>
+<arg>message=Aqui executei um bloco de IFs aninhados e caiu no bloco que corresponde a condição VERDADEIRA do primeiro IF!!!!</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.287870" elapsed="0.000671"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.282527" elapsed="0.006173"/>
+</branch>
+<branch type="ELSE IF" condition="${STATUS} &lt; 0">
+<kw name="Logar informações quando o status for menor que zero">
+<status status="NOT RUN" start="2025-02-13T11:02:08.289109" elapsed="0.000100"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>message=Aqui executei um bloco de IFs aninhados e caiu no bloco que corresponde a condição VERDADEIRA do segundo IF!!!!</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-13T11:02:08.289330" elapsed="0.000067"/>
+</kw>
+<status status="NOT RUN" start="2025-02-13T11:02:08.288832" elapsed="0.000628"/>
+</branch>
+<branch type="ELSE IF" condition="${STATUS} == 0">
+<kw name="Logar informações quando o status for igual a zero">
+<status status="NOT RUN" start="2025-02-13T11:02:08.289668" elapsed="0.000073"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>message=Aqui executei um bloco de IFs aninhados e caiu no bloco que corresponde a condição VERDADEIRA do terceiro IF!!!!</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-13T11:02:08.289844" elapsed="0.000064"/>
+</kw>
+<status status="NOT RUN" start="2025-02-13T11:02:08.289517" elapsed="0.000446"/>
+</branch>
+<branch type="ELSE">
+<if>
+<branch type="IF" condition="${STATUS} == ${EMPTY}">
+<kw name="Fail" owner="BuiltIn">
+<arg>O STATUS está vazio!</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-02-13T11:02:08.290225" elapsed="0.000061"/>
+</kw>
+<status status="NOT RUN" start="2025-02-13T11:02:08.290122" elapsed="0.000225"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>O STATUS ${STATUS} tem um valor desconhecido!</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-02-13T11:02:08.290876" elapsed="0.000097"/>
+</kw>
+<status status="NOT RUN" start="2025-02-13T11:02:08.290397" elapsed="0.000645"/>
+</branch>
+<status status="NOT RUN" start="2025-02-13T11:02:08.290099" elapsed="0.001000"/>
+</if>
+<status status="NOT RUN" start="2025-02-13T11:02:08.290015" elapsed="0.001107"/>
+</branch>
+<status status="PASS" start="2025-02-13T11:02:08.282384" elapsed="0.008780"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-13T11:02:08.291775" elapsed="0.000804"/>
+</kw>
+<status status="PASS" start="2025-02-13T11:02:08.277790" elapsed="0.015434"/>
+</test>
+<doc>Suíte de exmeplo didático para exemplificar o uso de IF nos testes</doc>
+<status status="PASS" start="2025-02-13T11:02:08.213623" elapsed="0.081339"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UsandoBlocosIF" id="s1" pass="3" fail="0" skip="0">UsandoBlocosIF</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-13T11:02:08.153418" level="WARN">Error in file 'c:\CursoUdemy\RobotFramework\ExemplosEstruturas\UsandoBlocosIF.robot' on line 11: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+</errors>
+</robot>
