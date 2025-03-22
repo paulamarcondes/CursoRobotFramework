@@ -1,2 +1,6 @@
 # CursoRobotFramework
-Curso de Robot Framework básico e avançado - Udemy - May Fernandes
+
+Materiais disponibilizados para o Curso de Robot Framework 
+Cursos Básico e Avançado - Udemy
+
+Professora - May Fernandes
